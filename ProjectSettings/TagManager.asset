@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - hole
+  - red_coin
+  - white_coin
+  - black_coin
+  - Logic
+  - striker_coin
+  - winner
+  - player_slider
+  - line_renderer
+  - p1_start
+  - opponent_slider
+  - p2_start
+  - board
+  - mid_pos
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Coins
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3991353585
+    locked: 0
