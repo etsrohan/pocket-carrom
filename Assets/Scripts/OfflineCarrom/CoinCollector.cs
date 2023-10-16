@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class CoinCollector : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class CoinCollector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("black_coin"))
         {
-            collision.gameObject.transform.position = new Vector3(-100, 0, 0);
+            collision.gameObject.transform.position = new Vector3(-1000, 0, 0);
             if (logic.queenPocketed)
             {
                 logic.addPoints(50);
@@ -30,7 +28,7 @@ public class CoinCollector : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("white_coin"))
         {
-            collision.gameObject.transform.position = new Vector3(-100, 0, 0);
+            collision.gameObject.transform.position = new Vector3(-1000, 0, 0);
             if (logic.queenPocketed)
             {
                 logic.addPoints(50);
@@ -43,7 +41,7 @@ public class CoinCollector : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("red_coin"))
         {
-            collision.gameObject.transform.position = new Vector3(-100, 0, 0);
+            collision.gameObject.transform.position = new Vector3(-1000, 0, 0);
             logic.queenPocketed = true;
             if (!logic.strikerPocketed) logic.changePlayer = false;
         }
@@ -51,11 +49,11 @@ public class CoinCollector : MonoBehaviour
         {
             if (logic.count % 2 == 0)
             {
-                logic.p1.gameObject.transform.position = new Vector3(-100, 0, 0);
+                logic.p1.gameObject.transform.position = new Vector3(-1000, 0, 0);
             }
             else
             {
-                logic.p2.gameObject.transform.position = new Vector3(-100, 0, 0);
+                logic.p2.gameObject.transform.position = new Vector3(-1000, 0, 0);
             }
             logic.strikerPocketed = true;
             logic.changePlayer = true;

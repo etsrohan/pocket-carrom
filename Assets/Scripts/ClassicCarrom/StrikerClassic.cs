@@ -33,7 +33,7 @@ public class StrikerClassic : NetworkBehaviour
     private GameObject CameraObj;
     Touch touch;
     // Start is called before the first frame update
-    void Start()
+    private void Initialize()
     {
 
         string posTag = IsHost ? "p1_start" : "p2_start";
@@ -61,6 +61,8 @@ public class StrikerClassic : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        base.OnNetworkSpawn();
+        Initialize();
         hostSliderValue.OnValueChanged += (float previousValue, float newValue) =>
         {
             if (!IsHost)
@@ -81,15 +83,6 @@ public class StrikerClassic : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
-
-        if (IsHost)
-        {
-            if (logic.count % 2 == 0)
-            {
-                gameObject.SetActive(true);
-
-            }
-        }
 
         // Get touch input
         if (Input.touchCount > 0)
@@ -154,13 +147,13 @@ public class StrikerClassic : NetworkBehaviour
             direction.Normalize();
             float magnitude = Vector2.Distance(selftrans.position, touchPos2);
             line.SetPosition(0, new Vector3(
-                selftrans.position.x + direction.x * (magnitude - 0.2f),
-                selftrans.position.y + direction.y * (magnitude - 0.2f),
+                selftrans.position.x + direction.x * (0.2f),
+                selftrans.position.y + direction.y * (0.2f),
                 selftrans.position.z
             ));
             line.SetPosition(1, new Vector3(
-                selftrans.position.x + (direction.x * (1.8f + magnitude)),
-                selftrans.position.y + (direction.y * (1.8f + magnitude)),
+                selftrans.position.x + (direction.x * (0.5f + magnitude * 3)),
+                selftrans.position.y + (direction.y * (0.5f + magnitude * 3)),
                 selftrans.position.z
             ));
         }
@@ -220,5 +213,11 @@ public class StrikerClassic : NetworkBehaviour
         logic.changePlayer = true;
         logic.sliderP2.value = 0;
         logic.putCoinsIntoStack();
+    }
+
+    [ClientRpc]
+    private void changeTurnClientRpc()
+    {
+
     }
 }

@@ -21,9 +21,6 @@ public class CarromNetworkTransfrom : NetworkTransform
 
     protected override void Update()
     {
-        Debug.Log($"MidPos: {midPos.transform.position.x} {midPos.transform.position.y}");
-        Debug.Log($"ThisPos: {transform.position.x} {transform.position.y}");
-
         base.Update();
         if (NetworkManager.Singleton != null && (NetworkManager.Singleton.IsConnectedClient || NetworkManager.Singleton.IsListening))
         {

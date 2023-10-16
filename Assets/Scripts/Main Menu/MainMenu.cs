@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("ClassicCarrom");
     }
 
+    public void SingleGame()
+    {
+        SceneManager.LoadScene("SingleCarrom");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

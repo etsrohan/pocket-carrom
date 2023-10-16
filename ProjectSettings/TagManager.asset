@@ -18,6 +18,7 @@ TagManager:
   - p2_start
   - board
   - mid_pos
+  - border
   layers:
   - Default
   - TransparentFX

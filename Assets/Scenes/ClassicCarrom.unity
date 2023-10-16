@@ -2566,6 +2566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1084863875}
   - component: {fileID: 1084863876}
+  - component: {fileID: 1084863877}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Logic
@@ -2616,6 +2617,25 @@ MonoBehaviour:
   strikerPocketed: 0
   gameOverScreen: {fileID: 1217850933}
   winnerText: {fileID: 1679464956}
+--- !u!114 &1084863877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084863873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 38610648
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 0
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &1172936401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,7 +3891,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f2f092ace2aa64d8794e3a1fb86a25ae, type: 2}
+  - {fileID: 2100000, guid: 883c794bba3494983a156b909c10893f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3897,7 +3917,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 2
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -3945,7 +3965,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 1
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
@@ -5040,7 +5060,7 @@ MonoBehaviour:
     PlayerPrefab: {fileID: 4347540800218862341, guid: 0f07e26c1d9aa4585bc65699c72315ab, type: 3}
     Prefabs:
       NetworkPrefabsLists: []
-    TickRate: 30
+    TickRate: 50
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
     ConnectionData: 

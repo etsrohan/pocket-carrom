@@ -68,6 +68,11 @@ public class GameLogicClassic : NetworkBehaviour
         coinsStackP2 = new Stack<GameObject>();
     }
 
+    // void Update()
+    // {
+    //     Debug.Log($"{count}, {countN.Value}");
+    // }
+
     public void changeTurn()
     {
         // // If Queen went in put queen back if no cover
@@ -150,6 +155,7 @@ public class GameLogicClassic : NetworkBehaviour
 
         // Change turn
         countN.Value = countN.Value + 1;
+        // changePlayerN.Value = true;
         strikerPocketed = false;
     }
 

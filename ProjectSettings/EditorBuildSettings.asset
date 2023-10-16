@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 95d735ba68ef34898b20e1fd28c2d3e2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/OfflineCarrom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ClassicCarrom.unity
     guid: 5d191a566e5c04ae59a9ceadb1a98929
+  - enabled: 1
+    path: Assets/Scenes/SingleCarrom.unity
+    guid: 45e4955a8a07e49ddbd972a3c6f2f810
   m_configObjects: {}
